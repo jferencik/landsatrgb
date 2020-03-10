@@ -85,14 +85,17 @@ def custom_stretch(band=None, min_percentile=None, max_percentile=None, power_sc
      Custom strech an Landsat8 band so the visualisation experience is enhanced when creating
     an RGB true colour product. Performs folowing steps in the specified order
         mask band using nodata_value.
-        compute min and max values suing min and max percentiles
+        compute min and max values using min and max percentiles
+        cuts off the min and max values
+        rescales the input band from original values to 0-255 range optionally applying power scaling
+        converts the 2 byte band to 1 byte
 
 
-    :param band:
-    :param min_percentile:
-    :param max_percentile:
-    :param power_scale:
-    :param nodata_value:
+    :param band: numpy array representing the band
+    :param min_percentile: float, the percenatile vaue used to compute the minimum value
+    :param max_percentile: float, the percentile value used to compute the maximum value
+    :param power_scale: float, the band will be scaled with inverse of this value
+    :param nodata_value: int, the value that corresponds to background in the band
     :return: scaled(unisgned 8 bit) and stretched band
     """
 
