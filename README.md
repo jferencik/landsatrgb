@@ -1,0 +1,1 @@
+create landsat truecolor 8bit composite
