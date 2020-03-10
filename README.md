@@ -1,13 +1,13 @@
-#Landsat 8 truecolor 8-bit composite creator
+# Landsat 8 truecolor 8-bit composite creator
 
 Uses a specific landsat image from landsat8 amazon cloud source to
 create an 8-bit true color composite (bands 4 3 and 2).
 Uses custom stretchng to enhance visually the output image
 
-#Download
+# Download
 git clone https://github.com/jferencik/landsatrgb.git .
 
-#Installation
+# Installation
 1. install docker. Folow your OS instructions from
     https://docs.docker.com/install/
 
@@ -15,7 +15,7 @@ git clone https://github.com/jferencik/landsatrgb.git .
 
     docker build -t landsat_tc .
 
-#Usage
+# Usage
 
 3. run the script
 
