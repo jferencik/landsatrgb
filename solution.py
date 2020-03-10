@@ -25,7 +25,7 @@ landsat_truecolor_bands = {
 }
 HTTP_READ_CHUNKSZIE = 1024*10
 
-
+a = 1
 
 def urls_from_bands(truecolor_bands=None):
     """
