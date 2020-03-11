@@ -47,7 +47,7 @@ copy the software from github repo:
     docker run --rm -v $(pwd):/landsat -e working_folder=/tmp landsattc python3 -m unittest discover -s /landsat
 ```
 
-This wil take som time because  the red image will be downloaded as part of the core tests.
+This wil take some time because  the red image will be downloaded as part of the core tests.
     
 
 # Usage
