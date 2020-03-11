@@ -2,7 +2,7 @@
 
 Uses a specific landsat image from landsat8 amazon cloud source to
 create an 8-bit true color composite (bands 4 3 and 2).
-Uses custom stretchng to enhance visually the output image
+Uses custom stretching to enhance visually the output image
 
 # Download
 git clone https://github.com/jferencik/landsatrgb.git .
@@ -14,18 +14,16 @@ git clone https://github.com/jferencik/landsatrgb.git .
 2. use the dockerfile to build an image
 
     docker build -t landsat_tc .
+ 
+3. run tests (optionally)
+    
 
 # Usage
-
-3. run the script
-
-
 
 
 ```bash
 docker run --rm -v $(pwd):/app landsat_tc python3 /app/solution.py -f
 ```
-
 
 ```
 usage: solution.py [-h] -wf WORKING_FOLDER
