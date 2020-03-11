@@ -2,13 +2,15 @@ import unittest
 import solution
 from urllib.request import urlopen
 import os
-
+import logging
+logging.basicConfig()
+logger = logging.getLogger(__name__)
+logger.setLevel('INFO')
 import rasterio
 class CoreTest(unittest.TestCase):
-
+    working_folder = os.environ.get('working_folder', None)
     def setUp(self) -> None:
         self.bands_dict = solution.landsat_truecolor_bands
-        self.working_folder = '/tmp'
         self.red_image = None
 
     def test_local_folder(self):
@@ -32,10 +34,11 @@ class CoreTest(unittest.TestCase):
         red_image_url = urls['red']
         root_url, image_name = os.path.split(red_image_url)
         local_image_path = os.path.join(self.working_folder, image_name)
-        if not os.path.exists(local_image_path):
-            with open(local_image_path, 'wb') as local_image:
-                with urlopen(red_image_url) as response:
-                    local_image.write(response.read())
+
+        with open(local_image_path, 'wb') as local_image:
+            logger.info(f'Downloading {red_image_url} to {local_image_path}')
+            with urlopen(red_image_url) as response:
+                local_image.write(response.read())
         self.red_image = local_image_path
 
 
