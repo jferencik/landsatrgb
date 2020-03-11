@@ -66,7 +66,9 @@ docker run --rm -v $(pwd):/landsat landsattc python3 /landsat/solution.py -wf /l
 this will create a blueish image
 
 The second option is the power scaling. Use this option to controls the luminosity of the  trucolor image.
-For example to create a very light image and thus decrese the contrast between adjacent pixels use
+For example to create a very light image and thus decrese the contrast between adjacent pixels use a higer value for 
+power scaling like 5
+
 ```bash
     docker run --rm -v $(pwd):/landsat landsattc python3 /landsat/solution.py -wf /landsat/data -pwr 5 5 5
 ```
