@@ -8,7 +8,7 @@ class CoreTest(unittest.TestCase):
 
     def setUp(self) -> None:
         self.bands_dict = solution.landsat_truecolor_bands
-        self.working_folder = solution.WORKING_FOLDER
+        self.working_folder = '/tmp'
         self.red_image = None
 
     def test_local_folder(self):

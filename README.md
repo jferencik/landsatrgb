@@ -16,6 +16,16 @@ git clone https://github.com/jferencik/landsatrgb.git .
     docker build -t landsat_tc .
  
 3. run tests (optionally)
+    There are two test modules
+    
+        a). core tests for the basic functions
+        
+            python3 -m unittest  tests/test_core.py
+            
+         b) run tests
+         
+        working_folder='/work/dev/python/landsatrgb/' python3 -m unittest  tests/test_run.py
+        
     
 
 # Usage
