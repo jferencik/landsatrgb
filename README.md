@@ -55,17 +55,26 @@ optional arguments:
 
 ```
 
+The script features two types of options. The percentiles, both min nad max aim at controlling
+ the amount of  red blue respectively green color will the image contain. For example to increase the amount of blue in
+ the image  use equal power scales and minperc and lower the maxperc for the blue band:
+ 
+ ```
+docker run --rm -v $(pwd):/landsat landsattc python3 /landsat/solution.py -wf /landsat/data -pwr 2 2 2 -maxperc 98 98 95 -minperc 1 1 1
+ ```
+this will create a blueish image
+
 # Create various true color composites
 
 
 
 
-run with default settings
+run with default settings or low contract true color
 ```bash
 docker run --rm -v $(pwd):/landsat landsattc python3 /landsat/solution.py -wf /landsat/data
 ```
 
-create a high contrast true color
+create a high contrast true color which I preffer
 
 ```bash
 docker run --rm -v $(pwd):/landsat landsattc python3 /landsat/solution.py -wf /landsat/data -pwr 2 2 2
