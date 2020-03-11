@@ -55,7 +55,8 @@ optional arguments:
 
 ```
 
-The script features two types of options. The percentiles, both min nad max aim at controlling
+The script features two types of options that control how the bands are stretched. 
+The percentiles, both min nad max aim at controlling
  the amount of  red blue respectively green color will the image contain. For example to increase the amount of blue in
  the image  use equal power scales and minperc and lower the maxperc for the blue band:
  
@@ -63,6 +64,12 @@ The script features two types of options. The percentiles, both min nad max aim 
 docker run --rm -v $(pwd):/landsat landsattc python3 /landsat/solution.py -wf /landsat/data -pwr 2 2 2 -maxperc 98 98 95 -minperc 1 1 1
  ```
 this will create a blueish image
+
+The second option is the power scaling. Use this option to controls the luminosity of the  trucolor image.
+For example to create a very light image and thus decrese the contrast between adjacent pixels use
+```bash
+    docker run --rm -v $(pwd):/landsat landsattc python3 /landsat/solution.py -wf /landsat/data -pwr 5 5 5
+```
 
 # Create various true color composites
 
