@@ -50,7 +50,6 @@ def load_or_download(urls=None, folder_to=None, chunked=True):
     :param chunked: bool, if true use a chunked approach when downloading data
     :return: dict containing image names (red, green blue) and image path on local disk
     """
-    assert os.path.isabs(folder_to), f'folder_to={folder_to} is not an absolute path'
     assert os.path.exists(folder_to), f'folder_to={folder_to} does not exist'
     assert os.access(folder_to, os.W_OK), f'folder_to={folder_to} is not writable'
     logger.info(f'Fetching bands...')
