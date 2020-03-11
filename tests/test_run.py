@@ -34,6 +34,4 @@ class RunTest(unittest.TestCase):
         assert rc == 0
 
 if __name__ == '__main__':
-    print('JUSSI')
-    RunTest.working_folder = '/work/dev/python/landsatrgb/'
     unittest.main()
