@@ -18,7 +18,7 @@ git clone https://github.com/jferencik/landsatrgb.git .
 3. run tests (optionally)
     There are two test modules, for core functionality and for run  functionality.
     The test modules needs the path to a folder where they can write. This path needs to be
-    passed in when running the unittests like this
+    passed in when running the unittests like this:
     
     ```bash
         working_folder=/tmp python3 -m unittest discover
