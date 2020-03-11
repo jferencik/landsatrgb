@@ -21,7 +21,7 @@ git clone https://github.com/jferencik/landsatrgb.git .
     passed in when running the unittests like this:
     
     ```bash
-        working_folder=/tmp python3 -m unittest discover
+        docker run --rm -v $(pwd):/landsat -e working_folder=/tmp landsattc python3 -m unittest discover -s /landsat
     ```
         
     
