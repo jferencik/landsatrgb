@@ -95,11 +95,12 @@ run with default settings or low contract true color:
 ```bash
 docker run --rm -v $(pwd):/landsat landsattc python3 /landsat/solution.py -wf /landsat/data
 ```
-
-check the data folder, the map.jpg and tci.jpg should be written there
+Again this will take some time as the iages are downloaded to the data subfolder.
+Next time the downloaded data will be reused.
+When the script finishes, the map.jpg and tci.jpg should be written to the data subfolder.
 ```bash
     ll data
-    ll data
+
     total 180304
     drwxr-xr-x 2 root root     4096 Mar 11 11:04 ./
     drwxr-xr-x 6 root root     4096 Mar 11 11:00 ../
