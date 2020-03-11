@@ -20,9 +20,9 @@ git clone https://github.com/jferencik/landsatrgb.git .
 
 # Usage
 
-
+1. check script command line options/capabilities
 ```bash
-docker run --rm -v $(pwd):/app landsat_tc python3 /app/solution.py -f
+docker run --rm -v $(pwd):/landsat landsattc python3 /landsat/solution.py -h
 ```
 
 ```
@@ -55,14 +55,21 @@ optional arguments:
 
 ```
 
-# Create true color composites
-create a low contrast blueish composite
+# Create various true color composites
+
+
+
+
+run with default settings
 ```bash
-docker run --rm -v $(pwd):/app landsat_tc python3 /app/solution.py -wf /app -p 2 2 2 -minperc 5 5 5
+docker run --rm -v $(pwd):/landsat landsattc python3 /landsat/solution.py -wf /landsat/data
 ```
 
-create a high contrast true color]
+create a high contrast true color
 
 ```bash
-docker run --rm -v $(pwd):/app landsat_tc python3 /app/solution.py -wf /app -p 2 2 2 -minperc 1 1 5
+docker run --rm -v $(pwd):/landsat landsattc python3 /landsat/solution.py -wf /landsat/data -pwr 2 2 2
 ```
+
+fell free to test various options like setting different min and max percentiles per band  or using
+different per band power scales
