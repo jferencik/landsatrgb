@@ -22,7 +22,7 @@ copy the software from github repo:
 
     
         git init .
-        git remote add https://github.com/jferencik/landsatrgb.git
+        git remote add origin https://github.com/jferencik/landsatrgb.git
         git pull origin master
     
 
